@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epic React: Component</title>
+    <!-- React CDN -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      console.log("Script Loaded");
+
+      const rootElement = document.getElementById("root");
+
+      const operations = {
+        "+": (left, right) => left + right,
+        "*": (left, right) => left * right,
+        "-": (left, right) => left - right,
+        "/": (left, right) => left / right,
+      };
+
+      // Fixed Calculator component
+      function Calculator({ operator, left, right }) {
+        const result = operations[operator]
+          ? operations[operator](left, right)
+          : "Invalid operator"; // Handle invalid operator case
+        return (
+          <>
+            <code>
+              {left} {operator} {right} ={" "}
+              <output>{result}</output>
+            </code>
+          </>
+        );
+      }
+
+      const element = (
+        <div>
+          <h1>Hello World</h1>
+          {/* Fixed operator to a valid one */}
+          <Calculator left={5} right={3} operator="+" />
+        </div>
+      );
+
+      // Attaching the element to the React root
+      ReactDOM.createRoot(rootElement).render(element);
+    </script>
+  </body>
+</html>
