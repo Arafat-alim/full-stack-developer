@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Epic React 02 - DOM non root</title>
+    </head>
+    <body>
+        <script type="module">
+            // ! create a root element as div
+            const rootElement = document.createElement("div");
+            //! newly created root element, add id = "root" to it
+            rootElement.id = "root";
+            //! create another element p tag
+            const words =  document.createElement("p");
+            words.textContent = "Hello World"
+            //! Add style: fontSize - 2 rem, color of the text - red
+            words.style.color = "red";
+            words.style.fontSize = "2rem"
+            //! Attached to the root element
+            rootElement.appendChild(words);
+            //! append to boyd
+            document.body.append(rootElement)
+            
+        </script>
+    </body>
+</html>

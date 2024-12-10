@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <title>Epic React</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+     
+        // Selecting the root element
+        const rootElement = document.getElementById("root");
+        //! create element using React.createElement
+        const element = React.createElement(
+            "div",
+            {className: "container"},
+            "Hello World"
+        )
+
+        //! Attached the root element and render the element
+        ReactDOM.createRoot(rootElement).render(element)
+
+    </script>
+</body>
+</html>

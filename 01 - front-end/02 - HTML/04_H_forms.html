@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05 - Forms</title>
+  </head>
+  <body>
+    <h2>Forms</h2>
+    <form>
+      <label for="email">
+        <input type="email" placeholder="Enter your Email" name="email" id="" />
+      </label>
+      <label for="password">
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id=""
+        />
+      </label>
+      <br />
+      <!--! CHeckbox -->
+      <fieldset>
+        <legend>You can choose Arafat or Alim</legend>
+        <input type="checkbox" name="arafat" id="" />
+        <label for="arafat">Arafat</label>
+
+        <input type="checkbox" name="alim" id="" />
+        <label for="alim">Alim</label>
+      </fieldset>
+      <br />
+
+      <!-- ! Radio BUtton -->
+      <fieldset>
+        <legend>Are you a Male or Female?</legend>
+        <input type="radio" name="gender" value="male" id="" />
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" value="female" id="" />
+        <label for="femail">Female</label>
+
+        <input
+          type="radio"
+          name="gender"
+          value="prefer-not-to-say"
+          id=""
+          checked
+        />
+        <label for="prefer-not-to-say">Prefer Not to say!</label>
+      </fieldset>
+
+      <div>
+        <label for="plans">Party Planning??</label>
+        <select name="plans" id="">
+          <option value="">---Please choose---</option>
+          <option value="ice-cream">Ice Cream</option>
+          <option value="cakes">Cake</option>
+          <option value="cold-drinks">Cold Drinks</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="color">Choose your fav color?</label>
+        <input type="color" name="color" id="" />
+      </div>
+
+      <div>
+        <label for="birth">Select Your Date of Birth</label>
+        <input type="datetime-local" name="birth" id="" />
+      </div>
+
+      <div>
+        <label for="party-date">Party Date</label>
+        <input
+          type="date"
+          min="2024-01-13"
+          max="2024-12-31"
+          value="2024-12-01"
+          id="party-date"
+        />
+      </div>
+
+      <div>
+        <label for="amount-contributed">Enter your contribution</label>
+        <input
+          type="range"
+          name=""
+          id=""
+          min="0"
+          max="100"
+          value="10"
+          step="10"
+        />
+      </div>
+
+      <div>
+        <label for="avatar">Choose a picture</label>
+        <input type="file" accept="image/png, image/jpeg" />
+      </div>
+
+      <div>
+        <label for="file">File</label>
+        <progress max="100" value="70" id="file" >70%</progress>
+      </div>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
